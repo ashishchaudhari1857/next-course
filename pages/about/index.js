@@ -19,8 +19,10 @@ const About = () => {
 
    {
     details.map((item)=>(
+      <div>
       <Link  href={`/about/${item.id}`}>
-       go</Link>
+       {item.name}</Link>
+     </div>
     ))
       
    }
