@@ -2,6 +2,13 @@
   padding: 0 2rem;
 }
 
+.action {
+  background-color: #0070f3;
+  display: flex;
+  margin: auto;
+  border-radius: 14px;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

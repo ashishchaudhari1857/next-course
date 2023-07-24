@@ -1,0 +1,27 @@
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input {
+    border: none;
+    width: 15rem;
+    border-bottom: 2px solid black;
+    margin-top: 2%;
+    text-align: center;
+}
+
+
+.actions {
+    background-color: #0070f3;
+    display: flex;
+    margin: auto;
+    border-radius: 14px;
+    margin-top: 2%;
+  }
