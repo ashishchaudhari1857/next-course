@@ -15,7 +15,13 @@ const Todo = (props) => {
     const obj={
       task:taskref.current.value,
     }
+    if(obj.task.length>0){
     addpost(obj)
+    }else{
+      alert("please enter valid task")
+    }
+
+    
      setedit("")
 
   };
