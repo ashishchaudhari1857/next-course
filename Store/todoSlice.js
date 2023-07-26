@@ -13,7 +13,7 @@ const todoSlice= createSlice({
             state.task=actiom.payload;
         },
         done:(state ,action)=>{
-            state.completedtask.push(action.payload);
+            state.completedtask=action.payload
         }
     }
 

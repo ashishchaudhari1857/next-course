@@ -1,0 +1,92 @@
+.taskcontainer{ 
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.taskcontainer>:nth-child(1){
+    background-color: rgb(247, 235, 235);
+     width: 40rem;
+     border-radius: 14px;
+     box-shadow: 0px 0px 3px ;
+
+}
+.taskcontainer>:nth-child(2){
+    background-color: rgb(247, 235, 235);
+     width: 15rem;
+     border-radius: 14px;
+     box-shadow: 0px 0px 3px ;
+
+}
+.task ul{
+    list-style: none;
+    display:  flex;
+
+}
+.task ul li:nth-child(1) {
+    width:68%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+   .button{
+    margin-left: 1px;
+    font-size: 1rem;
+    border-radius: 8px;
+  } 
+
+  @media (max-width: 768px){
+    .task ul{
+        font-size: 1.2rem;
+    }
+
+    .taskcontainer>:nth-child(1){
+        background-color: rgb(247, 235, 235);
+         width: 25rem;
+         border-radius: 14px;
+         box-shadow: 0px 0px 3px ;
+        
+    
+    }
+    .taskcontainer>:nth-child(2){
+        background-color: rgb(247, 235, 235);
+         width: 10rem;
+         border-radius: 14px;
+         box-shadow: 0px 0px 3px ;
+
+  }
+}
+
+
+@media (max-width: 550px){
+    .task ul{
+        font-size: 1.2rem;
+    }
+
+    .taskcontainer{ 
+        width: 100%;
+        display: block;
+        margin-top: 8%;
+    }
+    .taskcontainer>:nth-child(1){
+        background-color: rgb(247, 235, 235);
+         width: 20rem;
+         border-radius: 14px;
+         box-shadow: 0px 0px 3px ;
+         margin: auto;
+        
+    
+    }
+    .taskcontainer>:nth-child(2){
+        background-color: rgb(247, 235, 235);       
+         width: 20rem;
+         border-radius: 14px;
+         box-shadow: 0px 0px 3px ;
+         margin: auto;
+
+  }
+  .button{
+    margin-left: 0px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+}
