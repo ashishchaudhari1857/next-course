@@ -12,7 +12,7 @@ export default function Home(props) {
   const dispatch = useDispatch();
   dispatch(todoactions.add(props.data));
   dispatch(todoactions.done(props.donetask));
-  console.log(props.lastDate);
+  console.log("inssie rhe fucntion" ,props.lastDate);
 
   return (
     <div className={styles.container}>
@@ -49,6 +49,7 @@ export async function getServerSideProps(context) {
   // Check if the "lastdate" exists in the settings collection
   const settings = await settingscollection.findOne({ key: "lastdate" });
   let lastDate;
+  console.log(settings)
   if (!settings) {
     await settingscollection.insertOne({
       key: "lastdate",
@@ -59,17 +60,19 @@ export async function getServerSideProps(context) {
     lastDate = settings.lastdate;
   }
   //  day change
-
+  console.log(lastDate)
   if (lastDate !== new Date().toLocaleDateString()) {
     await todocollection.deleteMany({});
     await DoneTaskcollection.deleteMany({});
-    await settingscollection.insertOne({
-      key: "lastdate",
-      lastdate: new Date().toLocaleDateString(),
-    });
+    await settingscollection.updateOne(    
+      { key: "lastdate" },
+      { $set: { lastdate: new Date().toLocaleDateString() } } 
+    );
     lastDate = new Date().toLocaleDateString();
-  }
 
+
+  }
+ 
   const updatedDoneTask = await DoneTaskcollection.find({}).toArray();
 
   const result = await todocollection.find().toArray();
